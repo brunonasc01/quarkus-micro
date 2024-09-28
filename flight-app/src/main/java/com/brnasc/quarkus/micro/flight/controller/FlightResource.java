@@ -32,7 +32,7 @@ public class FlightResource {
   @Path("/booking/{id}")
   @Produces(MediaType.APPLICATION_JSON)
   public Flight retrieveByBooking(@PathParam("id") Long id) {
-    return Flight.findByBookingId(id);
+      return Flight.findByBookingId(id);
   }
 
   @POST

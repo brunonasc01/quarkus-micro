@@ -23,7 +23,7 @@ import java.util.List;
 public class BookingResource {
 
   @Inject
-    @RestClient
+  @RestClient
   FlightService flightService;
 
   @Inject

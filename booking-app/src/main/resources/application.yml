@@ -1,6 +1,25 @@
+"%prod":
+  quarkus:
+    datasource:
+      password: quarkus
+      username: quarkus
+      jdbc:
+        url: jdbc:postgresql://postgresql/quarkus
+
 quarkus:
   datasource:
     db-kind: postgresql
   hibernate-orm:
     database:
       generation: drop-and-create
+
+  container-image:
+    registry: docker.io
+    group: ${DOCKER_ACC}
+    name: booking-app
+    tag: 1.0-SNAPSHOT
+
+  kubernetes:
+    service-type: node-port
+  kubernetes-client:
+    trust-certs: true

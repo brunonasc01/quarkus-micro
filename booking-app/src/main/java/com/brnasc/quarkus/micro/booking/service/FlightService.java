@@ -44,11 +44,6 @@ public interface FlightService {
     @Produces(MediaType.APPLICATION_JSON)
     public FlightDto createFlight(FlightDto flight);
 
-    @GET
-    @Path("/q/health")
-    @Produces(MediaType.APPLICATION_JSON)
-    public HealthCheckResponse health();
-
     default public FlightDto fallBack(Long id) {
         return new FlightDto();
     }

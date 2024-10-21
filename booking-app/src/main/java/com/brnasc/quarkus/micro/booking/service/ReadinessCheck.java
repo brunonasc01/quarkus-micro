@@ -16,9 +16,9 @@ public class ReadinessCheck implements HealthCheck {
 
     @Override
     public HealthCheckResponse call() {
-            if(flightService.health().getStatus() == HealthCheckResponse.Status.UP) {
+//        if ((flightService.retrieveFlight(1l) != null) && (hotelService.retrieveHotel(1l) != null)){
             return HealthCheckResponse.up("ready");
-        }
-        return HealthCheckResponse.down("unavailable");
+//        }
+//        return HealthCheckResponse.down("unavailable");
     }
 }
